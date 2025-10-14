@@ -1,0 +1,31 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "modules-left": ["custom/menu"],
+  "modules-center": ["clock"],
+  "modules-right": ["wireplumber", "custom/battery", "tray", "custom/logout"],
+  "exclusive": true,
+
+  "custom/battery": {
+    "exec": "/home/lim/.config/waybar/battery.sh",
+    "interval": 30,
+    "return-type": "json"
+  },
+
+  "wireplumber": {
+    "format": "󰖀 {volume}% ",
+    "max-folume": 100,
+    "scroll-step": 5
+  },
+  "custom/menu": {
+    "format": "  ",
+    "on-click": "wofi --show drun"
+  },
+
+  "custom/logout": {
+    "format": " 󰍃 ",
+    "on-click": "wlogout"
+  }
+}
+

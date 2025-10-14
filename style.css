@@ -1,0 +1,30 @@
+window#waybar {
+    background: #11111b;
+    font-family: "Jetbrains Mono";
+    font-size: 16px;
+    color: #ffffff;
+}
+
+#clock {
+    padding: 0 20px;
+    border-radius: 1000px;
+}
+
+/* Батарея */
+.battery {
+    font-family: "Jetbrains Mono";
+    font-size: 14px;
+}
+.wireplumber {
+    font-family: "Jetbrains Mono";
+    font-size: 14px;
+}
+
+/* Панель трей */
+#tray { 
+padding: 0 20px; 
+}
+
+#menu {
+font-size: 99999999999px;
+}
