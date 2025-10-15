@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "top",
   "height": 30,
-  "modules-left": ["custom/menu"],
+  "modules-left": ["custom/menu", "cpu", "custom/memory"],
   "modules-center": ["clock"],
   "modules-right": ["wireplumber", "custom/battery", "tray", "custom/logout"],
   "exclusive": true,
@@ -26,6 +26,15 @@
   "custom/logout": {
     "format": " 󰍃 ",
     "on-click": "wlogout"
-  }
+  },
+  "cpu": {
+    "interval": 2,
+    "format": "  {usage}% "
+  },
+  "custom/memory": {
+  "exec": "~/.config/waybar/memory.sh",
+  "interval": 2,
+  "return-type": "json"
+ }
 }
 

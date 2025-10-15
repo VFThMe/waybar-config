@@ -40,5 +40,5 @@ else
 fi
 
 # Вывод JSON для Waybar
-printf '{"text":"%s %s%%","class":"battery %s"}\n' "$ICON" "$PERC" "$CLASS"
+printf '{"text":"%s %s%%","class":"battery  %s " } \n ' "$ICON" "$PERC" "$CLASS"
 
