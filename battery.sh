@@ -17,17 +17,17 @@ STATUS=$(cat "$BAT/status")
 if [ "$STATUS" = "Charging" ]; then
     ICON=""
 elif [ "$PERC" -ge 80 ]; then
-    ICON=""
+    ICON=""
 elif [ "$PERC" -ge 70 ]; then
-    ICON=""
+    ICON=""
 elif [ "$PERC" -ge 50 ]; then
-    ICON=""
+    ICON=""
 elif [ "$PERC" -ge 30 ]; then
-    ICON=""
+    ICON=""
 elif [ "$PERC" -ge 10 ]; then
-    ICON=""
+    ICON=""
 else
-    ICON="󰂃"
+    ICON=""
 fi
 
 # Определяем класс для CSS

@@ -1,5 +1,5 @@
 window#waybar {
-    background: #11111b;
+    background: #11111b; /* rgba(0, 0, 0, 0); #11111b; */
     font-family: "Jetbrains Mono";
     font-size: 16px;
     color: #ffffff;
@@ -7,17 +7,15 @@ window#waybar {
 
 #clock {
     padding: 0 20px;
-    border-radius: 1000px;
+    background: #11111b;
 }
 
 /* Батарея */
-.battery {
-    font-family: "Jetbrains Mono";
-    font-size: 14px;
+#custom-battery {
+    color: #a6e3a1;
 }
-.wireplumber {
+#wireplumber {
     font-family: "Jetbrains Mono";
-    font-size: 14px;
 }
 
 /* Панель трей */
@@ -27,4 +25,9 @@ padding: 0 20px;
 
 #menu {
 font-size: 99999999999px;
+color: #89b4fa;
+}
+
+#custom-cava {
+	margin-left: 250px;
 }

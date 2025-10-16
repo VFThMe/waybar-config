@@ -2,11 +2,14 @@
   "layer": "top",
   "position": "top",
   "height": 30,
-  "modules-left": ["custom/menu", "cpu", "custom/memory"],
+  "modules-left": ["custom/menu", "custom/separator", "cpu", "custom/memory", "mpris", "custom/cava"],
   "modules-center": ["clock"],
-  "modules-right": ["wireplumber", "custom/battery", "tray", "custom/logout"],
+  "modules-right": ["hyprland/language", "custom/separator", "custom/wifi", "wireplumber", "custom/battery", "tray", "custom/logout"],
   "exclusive": true,
 
+  "clock": {
+	  "on-click": "kitty -e clock-rs -c magenta"
+},
   "custom/battery": {
     "exec": "/home/lim/.config/waybar/battery.sh",
     "interval": 30,
@@ -14,11 +17,13 @@
   },
 
   "wireplumber": {
-    "format": "󰖀 {volume}% ",
-    "max-folume": 100,
-    "scroll-step": 5
-  },
-  "custom/menu": {
+    "format": "{icon}{volume}% ",
+    "format-muted": " Muted ",
+    "format-icons": [" "," "," "],
+    "scroll-step": 5,
+    "max-volume": 100
+},
+    "custom/menu": {
     "format": "  ",
     "on-click": "wofi --show drun"
   },
@@ -29,12 +34,31 @@
   },
   "cpu": {
     "interval": 2,
-    "format": "  {usage}% "
+    "format": " {usage}%  ",
+    "on-click": "kitty -e htop"
   },
   "custom/memory": {
-  "exec": "~/.config/waybar/memory.sh",
-  "interval": 2,
-  "return-type": "json"
- }
-}
+   "exec": "~/.config/waybar/memory.sh",
+   "interval": 2,
+   "return-type": "json"
+ },
+  "custom/separator": {
+	  "format": " "
+},
+"hyprland/language": {
+    "keyboard-name": "at-translated-set-2-keyboard", // Replace with your keyboard name from `hyprctl devices`
+    "format": " {short} ",
+    "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next" // Replace with your keyboard name
+},
 
+"custom/wifi": {
+    "format": "󰖩  ",
+    "on-click": "kitty -e nmtui"
+},
+"tray": {
+	"spacing": 10
+}
+/* "custom/cava": {
+   "exec": "~/.config/waybar/cava.sh"
+} */
+}
